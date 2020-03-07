@@ -46,6 +46,7 @@ namespace AngelCoScrap
             int prev = 0;
             this.JobCount = 0;
 
+            //START ACTION
             this.LoadPage(url);
             this.LogIn(username, password);
             this.LoadJobsPage();
@@ -53,9 +54,10 @@ namespace AngelCoScrap
             this.SetToNewest();
             int allResults = this.GetAllResultCount();
             this.allResultCount = allResults;
-            List<string> companyList = new List<string>();
-           
+            List<string> companyList = new List<string>();         
             int delay = 3000;
+
+            //START COLLECT DATA
             try
             {
                 do
